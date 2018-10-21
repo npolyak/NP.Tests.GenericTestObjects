@@ -9,9 +9,6 @@
 // Also as a courtesy, please, mention this software in any documentation for the 
 // products that use it.
 
-using NP.Tests.GenericTestObjects;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace NP.Tests.GenericTestObjects
@@ -25,10 +22,9 @@ namespace NP.Tests.GenericTestObjects
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
 
-
         #region HomeAddress Property
-        private AddressWithParent _homeAddress;
-        public AddressWithParent HomeAddress
+        private Address _homeAddress;
+        public Address HomeAddress
         {
             get
             {
@@ -43,22 +39,11 @@ namespace NP.Tests.GenericTestObjects
 
                 this._homeAddress = value;
 
-                if (_homeAddress != null)
-                {
-                    // in most tests "TheParent" property is not needed
-                    _homeAddress.TheParent = this;
-                }
                 this.OnPropertyChanged(nameof(HomeAddress));
             }
         }
         #endregion HomeAddress Property
-
-
-        #region WorkAddress Property
-        private AddressWithParent _workAddress;
-        public AddressWithParent WorkAddress
-        {
-            get
+get
             {
                 return this._workAddress;
             }
@@ -71,11 +56,6 @@ namespace NP.Tests.GenericTestObjects
 
                 this._workAddress = value;
 
-                if (_workAddress != null)
-                {                   
-                    // in most tests "TheParent" property is not needed
-                    _workAddress.TheParent = this;
-                }
                 this.OnPropertyChanged(nameof(HomeAddress));
             }
         }

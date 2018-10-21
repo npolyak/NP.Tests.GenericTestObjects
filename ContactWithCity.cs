@@ -1,12 +1,4 @@
-﻿using NP.Tests.GenericTestObjects;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NP.Tests.GenericTestObjects
+﻿namespace NP.Tests.GenericTestObjects
 {
     public class ContactWithCity : Contact
     {
