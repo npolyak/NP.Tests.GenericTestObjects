@@ -43,7 +43,12 @@ namespace NP.Tests.GenericTestObjects
             }
         }
         #endregion HomeAddress Property
-get
+
+        #region WorkAddress Property
+        private Address _workAddress;
+        public Address WorkAddress
+        {
+            get
             {
                 return this._workAddress;
             }
